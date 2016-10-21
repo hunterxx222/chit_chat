@@ -5,7 +5,7 @@ class SessionsController < ApplicationController
         if @user.authenticate(params[:password])
           session[:user_id] = @user.id
           flash[:success] = "Login successfully"
-          redirect_to root_path
+          redirect_to incoming_messages_path
         else
           flash.now[:error] = "Incorrect password"
           render 'new'

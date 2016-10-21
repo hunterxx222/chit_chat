@@ -1,4 +1,17 @@
 Rails.application.routes.draw do
+  get 'messages/incoming'
+
+  resources :messages do
+    get 'incoming' => 'messages'
+      collection do
+        get 'incoming'
+      end
+
+    member do
+      post 'mark_as_read'
+    end
+  end
+
   get 'login' => "sessions#new"
   resources :sessions, only: [:new, :create]
 

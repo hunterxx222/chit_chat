@@ -10,4 +10,10 @@ class ApplicationController < ActionController::Base
       @current_user = User.find session[:user_id]
     end
   end
+
+  def require_user!
+    unless current_user
+      redirect_to new_session_path, flash: {success: "Please login first"}
+    end
+  end
 end
