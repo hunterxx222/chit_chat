@@ -10,6 +10,11 @@ Rails.application.routes.draw do
     member do
       post 'mark_as_read'
     end
+
+    collection do
+      get :sent
+      get :received
+    end
   end
 
   get 'login' => "sessions#new"
