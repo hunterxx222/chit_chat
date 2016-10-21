@@ -14,12 +14,12 @@ class MessagesController < ApplicationController
 
   def sent
     load_user
-    @message = @user.sent_message
+    @messages = @user.sent_messages
   end
 
   def received
     load_user
-    @message = @user.received_message
+    @messages = @user.received_messages
   end
 
   def load_user

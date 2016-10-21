@@ -4,11 +4,11 @@ class User < ApplicationRecord
 
   has_secure_password
 
-  def received_message
+  def received_messages
     Message.where(recipient: self)
   end
 
-  def sent_message
+  def sent_messages
     Message.where(sender: self)
   end
 
@@ -23,7 +23,7 @@ class User < ApplicationRecord
   def unread_messages
     received_messages.unread
   end
-  
+
   def to_s
     email
   end

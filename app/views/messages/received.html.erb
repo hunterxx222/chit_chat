@@ -1,0 +1,12 @@
+<table class="table">
+  <thead>
+    <th>From</th>
+    <th>To</th>
+    <th>Subject</th>
+    <th>Body</th>
+    <th>Read At</th>
+  </thead>
+  <% @messages.each do |message| %>
+    <%= render message %>
+  <% end %>
+</table>
