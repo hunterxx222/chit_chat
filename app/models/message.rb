@@ -12,5 +12,5 @@ class Message < ApplicationRecord
   def read?
     read_at
   end
-  
+
 end

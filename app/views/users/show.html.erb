@@ -13,10 +13,10 @@
       <% end %>
     </ul>
 
-    <h2>Users added me as friend</h2>
+    <h4>Users added me as friend</h4>
       <ul>
         <% for user in current_user.inverse_friends %>
-          <li><%=h user.username %></li>
+          <li><%=h user.name %></li>
         <% end %>
       </ul>
   </body>

@@ -1,0 +1,16 @@
+<table class="table">
+  <thead>
+    <th>From</th>
+    <th>To</th>
+    <th>Subject</th>
+    <th>Body</th>
+    <th>Read At</th>
+  </thead>
+  <tr>
+    <td><%= @message.sender %></td>
+    <td><%= @message.recipient %></td>
+    <td><%= @message.subject %></td>
+    <td><%= @message.body %></td>
+    <td><%= @message.read_at %></td>
+  </tr>
+</table>

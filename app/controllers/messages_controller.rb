@@ -1,9 +1,10 @@
 class MessagesController < ApplicationController
   before_action :require_user!
 
-  def create
+  def index
+    load_user
     @user = User.find params[:user_id]
-    @message = User.sent_messages.build message_params
+    @message = @user.sent_messages.build message_params
       if @messages.save
       else
       end
@@ -14,8 +15,9 @@ class MessagesController < ApplicationController
   end
 
   def show
+    load_user
     @message = Message.find params[:id]
-    if @message.unread? && current_user == @message.recipient
+    if @message.read_at == nil && @user == @message.recipient
       @message.mark_as_read!
     end
   end
