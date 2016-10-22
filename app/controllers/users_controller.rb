@@ -1,4 +1,9 @@
 class UsersController < ApplicationController
+
+  def index
+    @user = User.all
+  end
+
   def new
     @user = User.new
   end
@@ -13,14 +18,11 @@ class UsersController < ApplicationController
     end
   end
 
-  def add_friend
-  end
-
-  def remove_friend
+  def show
   end
 
   private
   def user_params
-    params.require(:user).permit(:email, :password, :password_confirmation)
+    params.require(:user).permit(:name, :email, :password, :password_confirmation)
   end
 end

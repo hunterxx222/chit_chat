@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My Profile</title>
+  </head>
+  <body>
+    <p><b>Profile:</b> <%= current_user.name %></p>
+    <ul>
+      <% for friendship in current_user.friendships %>
+        <li><%= friendship.friend.name %></li>
+        <%= link_to "Remove", friendship, :method => :delete %>
+      <% end %>
+    </ul>
+
+    <h2>Users added me as friend</h2>
+      <ul>
+        <% for user in current_user.inverse_friends %>
+          <li><%=h user.username %></li>
+        <% end %>
+      </ul>
+  </body>
+</html>

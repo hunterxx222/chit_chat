@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
+  resources :friendships
+
   get 'messages/incoming'
+
+  resources :users do
+    resources :messages
+  end
 
   resources :messages do
     get 'incoming' => 'messages'
@@ -21,7 +27,6 @@ Rails.application.routes.draw do
   resources :sessions, only: [:new, :create]
 
   delete 'logout' => 'sessions#destroy'
-  resources :users
   root 'home#index'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html

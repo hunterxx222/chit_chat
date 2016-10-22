@@ -1,6 +1,14 @@
 class MessagesController < ApplicationController
   before_action :require_user!
 
+  def create
+    @user = User.find params[:user_id]
+    @message = User.sent_messages.build message_params
+      if @messages.save
+      else
+      end
+  end
+
   def incoming
     @incoming_messages = current_user.incoming_messages
   end
@@ -28,5 +36,10 @@ class MessagesController < ApplicationController
     else
       @user = current_user
     end
+  end
+
+  private
+  def message_params
+    params.require(:message).permit(:recipient_id, :body)
   end
 end
