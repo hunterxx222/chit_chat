@@ -3,7 +3,6 @@ class MessagesController < ApplicationController
 
   def index
     load_user
-    @user = User.find params[:user_id]
     @message = @user.sent_messages.build message_params
       if @messages.save
       else

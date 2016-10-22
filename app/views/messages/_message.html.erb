@@ -1,8 +1,8 @@
-<tr>
-  <td><%= message.sender %></td>
-  <td><%= message.recipient %></td>
-  <td><%= message.subject %></td>
-  <td><%= message.body %></td>
-  <td><%= message.read_at %></td>
-  <td><%= link_to "View", message , class: "btn btn-primary" %></td>
-</tr>
+<%= content_tag :tr, class: "table#{'-warning' if message.read_at == nil}" do -%>
+    <td><%= message.sender %></td>
+    <td><%= message.recipient %></td>
+    <td><%= message.subject %></td>
+    <td><%= message.body %></td>
+    <td><%= message.read_at %></td>
+    <td><%= link_to "View", message , class: "btn btn-primary" %></td>
+<% end %>
