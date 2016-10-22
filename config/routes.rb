@@ -13,10 +13,6 @@ Rails.application.routes.draw do
         get 'incoming'
       end
 
-    member do
-      post 'mark_as_read'
-    end
-
     collection do
       get :sent
       get :received

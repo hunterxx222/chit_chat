@@ -1,11 +1,19 @@
 class MessagesController < ApplicationController
   before_action :require_user!
 
-  def index
+  def new
+    @users = User.all #friends
+    @message = Message.new
+  end
+
+  def create
+
     load_user
     @message = @user.sent_messages.build message_params
-      if @messages.save
+      if @message.save
+        flash[:success] = "Message sent"
       else
+        flash[:error] = "Error - Message not sent"
       end
   end
 

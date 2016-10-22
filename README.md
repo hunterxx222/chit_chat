@@ -1,12 +1,12 @@
-# Homework 2 - *Name of App*
+# Homework 2 - *Chit Chat - A Chat App for Rails Developers*
 
-**Name of your app** is a Ruby on Rails blog application that allows users to send messages to each other that can only be read once.
+**Chit Chat** is a Ruby on Rails blog application that allows users to send messages to each other that can only be read once.
 
-Submitted by: **Your Name Here**
+Submitted by: **Toan Ngo**
 
-Time spent: **X** hours
+Time spent: **~20** hours
 
-URL: **Insert your Heroku URL here**
+URL: **https://desolate-wildwood-26321.herokuapp.com
 
 ## User Stories
 
@@ -29,7 +29,7 @@ The following **optional** functionality is complete:
 * [ ] User can have multiple recipients on one message.
 * [ ] User can log in with Facebook.
 * [ ] User A can "block" User B. If User A blocks User B, they will not see messages from User B. User B will not know they have been blocked.
-* [ ] User can remove friends from their friends list.
+* [x] User can remove friends from their friends list.
 * [ ] User can unblock friends from their block list.
 * [ ] Implement Infinite Scroll. Hint: you can use the [kaminari gem](https://github.com/amatsuda/kaminari) and [jquery-infinite-pages gem](https://github.com/magoosh/jquery-infinite-pages).
 * [ ] User gets an email when they receive a message, with a link to view the message.
