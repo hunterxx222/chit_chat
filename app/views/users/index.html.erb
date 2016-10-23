@@ -9,7 +9,9 @@
   <tr>
     <td><%= user.name %></td>
     <td><%= user.email %></td>
-    <td><%= link_to "Add Friend", friendships_path(:friend_id => user), :method => :post, class: "btn btn-primary" %></td>
+    <td>
+      <%=link_to "Add Friend", friendships_path(:friend_id => user), :method => :post, class: "btn btn-primary" %>
+    </td>
   </tr>
 <% end %>
 </tbody>
