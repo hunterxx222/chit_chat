@@ -1,8 +1,7 @@
 <%= content_tag :tr, class: "table#{'-warning' if message.read_at == nil}" do -%>
     <td><%= message.sender %></td>
     <td><%= message.recipient %></td>
-    <td><%= message.subject %></td>
-    <td><%= message.body %></td>
-    <td><%= message.read_at %></td>
+    <td><%= message.body if message.sender == current_user%></td>
+    <td><%= time_ago_in_words(message.read_at)%></td>
     <td><%= link_to "View", message , class: "btn btn-primary" %></td>
 <% end %>

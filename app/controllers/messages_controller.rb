@@ -7,7 +7,6 @@ class MessagesController < ApplicationController
   end
 
   def create
-
     load_user
     @message = @user.sent_messages.build message_params
       if @message.save
@@ -49,6 +48,6 @@ class MessagesController < ApplicationController
 
   private
   def message_params
-    params.require(:message).permit(:recipient_id, :body)
+    params.require(:message).permit(:recipient_id, :subject, :body)
   end
 end

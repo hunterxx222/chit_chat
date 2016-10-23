@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resources :friendships
 
-  get 'messages/incoming'
+  get 'messages/inbox'
 
   resources :users do
     resources :messages
