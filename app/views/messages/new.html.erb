@@ -1,4 +1,3 @@
-<div class="container">
 <%= form_for [@message], :html => { :class => "form-group" } do |f| %>
   <%= f.label :recipient_id %>
   <%= f.select :recipient_id, @users.map{|u| [u.email, u.id]}, {}, {class: "form-control"} %><br>
@@ -6,4 +5,3 @@
   <%= f.text_area :body, :class =>'form-control' %> <br>
   <%= f.submit 'Send', :class => 'btn btn-primary' %>
 <% end %>
-</div>
