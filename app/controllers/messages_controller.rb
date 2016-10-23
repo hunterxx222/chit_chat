@@ -2,7 +2,7 @@ class MessagesController < ApplicationController
   before_action :require_user!
 
   def new
-    @users = User.all #friends
+    @users = current_user.friends
     @message = Message.new
   end
 
