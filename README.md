@@ -6,7 +6,7 @@ Submitted by: **Toan Ngo**
 
 Time spent: **~20** hours
 
-URL: **https://desolate-wildwood-26321.herokuapp.com
+URL: **http://awesome-chitchat.herokuapp.com
 
 ## User Stories
 
